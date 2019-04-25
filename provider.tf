@@ -17,8 +17,9 @@ terraform {
 #  workspace = "${terraform.workspace}"
 #
 #  config {
-#   project = "app"
+#    project = "app"
 #    bucket  = "my-bucket"
-#    prefix  = "terraform/state"
+#    prefix  = "terraform/state"   
+# or key    = "networking/${terraform.workspace}/terraform.tfstate"
 #  }
 #}
