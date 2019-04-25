@@ -7,6 +7,7 @@ storage_class = "REGIONAL"
 
 module "label" {
   source      = "../"
+  name        = "${var.app_name}"
   namespace   = "${var.namespace}"
   environment = "${var.environment}"
 }
