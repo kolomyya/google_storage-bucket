@@ -6,7 +6,8 @@ provider "gcp" {
 terraform { 
   backend "google_storage_bucket" {   
     bucket  = "${var.bucket_name}"   
-    path    = "/terraform.tfstate"   
+    path    = "/terraform.tfstate"  
+#   path   = "terraform/state/${terraform.workspace}.tfstate"  
     project = "my-project-id" 
   }
 }
