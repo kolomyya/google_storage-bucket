@@ -8,6 +8,5 @@ storage_class = "REGIONAL"
 module "label" {
   source      = "git::https://github.com/fuchicorp/webplatform.git"
   namespace   = "${var.namespace}"
-  stage       = "${var.stage}"
   environment = "${var.environment}"
 }
