@@ -11,3 +11,7 @@ resource "google_storage_bucket" "bucket" {
    }
 }
 
+#resource "google_storage_bucket_acl" "image-store-acl" {
+#  bucket = "${google_storage_bucket.#{var.bucket_name}.name}"
+#  predefined_acl = "publicreadwrite"
+#}
