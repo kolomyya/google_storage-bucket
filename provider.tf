@@ -10,3 +10,15 @@ terraform {
     project = "my-project-id" 
   }
 }
+
+
+#data "terraform_remote_state" "common" {
+# backend = "gcs"
+#  workspace = "${terraform.workspace}"
+#
+#  config {
+#   project = "app"
+#    bucket  = "my-bucket"
+#    prefix  = "terraform/state"
+#  }
+#}
