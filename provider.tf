@@ -1,16 +1,25 @@
 provider "gcp" {
-  credentials = "${file("account.json")}"
+  credentials = "${file("${var.cpath}")}"
   project     = "my-project-id"
   region      = "${var.region}"
 }
-terraform { 
-  backend "google_storage_bucket" {   
-    bucket  = "${var.bucket_name}"   
-    path    = "/terraform.tfstate"  
+
+
+
+
+
+
+
+
+
+#terraform { 
+#  backend "google_storage_bucket" {   
+#    bucket  = "${var.bucket_name}"   
+#    path    = "/terraform.tfstate"  
 #   path   = "terraform/state/${terraform.workspace}.tfstate"  
-    project = "my-project-id" 
-  }
-}
+#    project = "my-project-id" 
+#  }
+#}
 
 
 #data "terraform_remote_state" "common" {
