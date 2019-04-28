@@ -1,6 +1,6 @@
 terraform {
-  backend "google" {
-    bucket  = "${var.bucket_name}"
+  backend "gcs" {
+    bucket  = "my_bucket"
     path    = "/terraform.tfstate"
     project = "fuchicopr"
   }
