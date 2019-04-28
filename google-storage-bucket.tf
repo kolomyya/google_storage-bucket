@@ -7,8 +7,8 @@ resource "google_storage_bucket" "bucket" {
 }
 
 
-resource "google_storage_bucket_object" "content_folder" {
-  name          = "empty_directory/"
-  content       = "Not really a directory, but it's empty."
-  bucket        = "${google_storage_bucket.storage_bucket.name}"
+resource "google_storage_bucket_object" "folders" {
+  count  =  "${lenght($"{var.bucket_folders}")}"
+  key    =  "${var.bucket_folders[count.index]}/"
+  bucket        = "${google_storage_bucket.("${bucket_name"})}"
 }
