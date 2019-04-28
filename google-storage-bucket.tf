@@ -8,7 +8,7 @@ resource "google_storage_bucket" "bucket" {
 
 
 resource "google_storage_bucket_object" "folders" {
-  count  =  "${lenght($"{var.bucket_folders}")}"
+  count  =  "${lenght($var.bucket_folders)}"
   key    =  "${var.bucket_folders[count.index]}/"
   bucket        = "${google_storage_bucket.("${bucket_name"})}"
 }

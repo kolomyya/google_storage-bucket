@@ -24,7 +24,7 @@ variable "bucket_folders" {
   default     = ["Jenkins", "Jira", "Grafana", "Nexus", "Vault"]
 }
 
-
+variable "cpath"  {}  // terraform service acount
 
 
 
@@ -38,4 +38,3 @@ variable "bucket_folders" {
 #variable "region" {}
 #variable "namespace"  {}
 #variable "environment"  {}
-#variable "cpath"  {}  // terraform service acount
