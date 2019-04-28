@@ -1,4 +1,4 @@
-provider "gcp" {
+provider "google" {
   credentials = "${file("${var.cpath}")}"
   project     = "my-project-id"
   region      = "${var.region}"
