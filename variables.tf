@@ -18,6 +18,12 @@ variable "storage-class" {
   default = "REGIONAL"
 }
 
+variable "bucket_folders" {
+  type        = "list"
+  description = "The list of bucket folders to create"
+  default     = ["Jenkins", "Jira", "Grafana", "Nexus", "Vault"]
+}
+
 
 
 
