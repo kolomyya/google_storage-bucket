@@ -1,6 +1,6 @@
 # terraform-google-storage-bucket
 
-#Setup
+# Setup
 
 Don't forget to place the file ```account.json``` inside the ```credentials``` dir in the root directory before running which would contain your service ```Account Key```  file.
 
@@ -14,7 +14,7 @@ For the Key type field chose JSON. Put the downloaded file right were your Terra
 
 If you are using the gcs as the backend, you will need to give it the ```Storage Admin``` role for the ```storage.buckets.create``` permission.
 
-#In order to do so we are going to create four files:
+# In order to do so we are going to create four files:
 
 ```main.tf``` -- contains the definition of what we want to achieve
 ```variables.tf``` -- contains the variables definition.
@@ -22,7 +22,7 @@ If you are using the gcs as the backend, you will need to give it the ```Storage
 
 
 
-#Variables
+# Variables
 
 ```variables.tf``` holds the definition of the elements that can be configured in your
 deployment script.
@@ -32,7 +32,7 @@ From now on every time you run a ```terraform``` commands ##{plan|apply|destroy|
 
 If you do not want to set these values on every run you can create a file called ```config.tfvars```
 
-#Architecture
+# Architecture
 
 Now that we know what we want to build and also how we want to parametrize our script we are ready to build the ```main.tf```  The code snippets below are extracted from this file.
 
@@ -66,7 +66,7 @@ When the terraform apply command completes, use the Google Cloud console, you sh
 
 And folder
 
-#Listing Bucket Details
+# Listing Bucket Details
 
 If you want to see information about the bucket itself, use the ```-b``` option. For example:
 ```
@@ -74,7 +74,7 @@ gsutil ls -L -b gs://bucket
 ```
 
 
-###One closing note 
+### One closing note 
 
 Don't forget to tear down your cluster when you are done experimenting with ```terraform destroy``` to avoid a surprise bill at the end of the month :)
 
