@@ -18,10 +18,10 @@ resource "google_storage_bucket_object" "folder" {
 }
 
 
-terraform {
-  backend "gcs" {
-    bucket  = "fuchicorp_bucket"
-    prefix    = "test/terraform.tfstate"    #A path to the data you want to upload
-    project = "focus-surfer-237100"
-  }
-}
+#terraform {
+#  backend "gcs" {
+#    bucket  = "fuchicorp_bucket"
+#    prefix    = "test/terraform.tfstate"    #A path to the data you want to upload
+#   project = "focus-surfer-237100"
+#  }
+#}
