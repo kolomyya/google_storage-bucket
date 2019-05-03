@@ -45,7 +45,7 @@ The first command that should be run after writing a new Terraform configuration
 ```
 terraform init
 ```
-Configure  storage bucket name.
+# Configure  storage bucket name.
 
 You must modify the Google Cloud Storage bucket name, region,namespace and environment  which is defined as an input variable bucket_name in variables.tf file.
 
