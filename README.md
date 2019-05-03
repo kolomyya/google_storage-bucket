@@ -1,5 +1,3 @@
-# terraform-google-storage-bucket
-
 # Setup
 
 Don't forget to place the file ```account.json``` inside the ```credentials``` dir in the root directory before running which would contain your service ```Account Key```  file.
@@ -41,7 +39,7 @@ Now that we know what we want to build and also how we want to parametrize our s
 
 
 
-Initialize working directory.
+# Initialize working directory.
 
 The first command that should be run after writing a new Terraform configuration is the terraform init command in order to initialize a working directory containing Terraform configuration files. It is safe to run this command multiple times.
 ```
