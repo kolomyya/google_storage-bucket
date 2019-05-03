@@ -54,7 +54,7 @@ Run command:
 ```
 terraform plan -var-file=config.tfvars   Displays what would be executed
 ```
-Deploy the changes.
+# Deploy the changes.
 
 Run command:
 ```
@@ -62,7 +62,7 @@ terraform apply  -var-file=config.tfvars    Applies the changes
 ```
 Test the deploy.
 
-When the terraform apply command completes, use the Google Cloud console, you should see the new Google Storage bucket created in the Google Cloud Project.
+When the ```terraform apply``` command completes, use the ```Google Cloud console```, you should see the new ```Google Storage bucket``` created in the ```Google Cloud Project```.
 
 And folder
 
