@@ -51,15 +51,15 @@ You must modify the Google Cloud Storage bucket name, region,namespace and envir
 
 
 Run command:
-```
-terraform plan -var-file=config.tfvars   Displays what would be executed
-```
+
+```terraform plan -var-file=config.tfvars```   Displays what would be executed
+
 # Deploy the changes.
 
 Run command:
-```
-terraform apply  -var-file=config.tfvars    Applies the changes
-```
+
+```terraform apply  -var-file=config.tfvars```    Applies the changes
+
 Test the deploy.
 
 When the ```terraform apply``` command completes, use the ```Google Cloud console```, you should see the new ```Google Storage bucket``` created in the ```Google Cloud Project```.
@@ -81,7 +81,7 @@ Don't forget to tear down your cluster when you are done experimenting with ```t
 Clean up the resources created.
 
 When you have finished, run command:
-```
-terraform destroy -var-file=config.tfvars     Wipes out what have been created
 
-```
+```terraform destroy -var-file=config.tfvars```     Wipes out what have been created
+
+
