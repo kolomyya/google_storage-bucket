@@ -17,7 +17,9 @@ If you are using the gcs as the backend, you will need to give it the ```Storage
 # In order to do so we are going to create four files:
 
 ```main.tf``` -- contains the definition of what we want to achieve
+
 ```variables.tf``` -- contains the variables definition.
+
 ```config.tfvars``` -- contains the values for variables.
 
 
