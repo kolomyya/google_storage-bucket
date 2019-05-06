@@ -13,3 +13,6 @@ terraform {
   }
 }
 
+#resource "google_storage_bucket_acl" "fuchicorp_bucket-acl" {
+#  bucket = "${google_storage_bucket.fuchicorp_bucket.name}"
+#  }
