@@ -8,7 +8,9 @@ provider "google" {
 terraform {
   backend "gcs" {
     bucket  = "fuchicorp_bucket"
-    prefix    = "webplatform-fuchicorp-deploy_dev/terraform.tfstate"    #A path to the data you want to upload
+    prefix    = "webplatform-fuchicorp-deploy_dev/terraform.tfstate"       #A path to the data you want to upload
+   #prefix   =  "common-tools/"${var.google_k8s_service}"/terraform.tfstate"
+    
     project = "focus-surfer-237100"
   }
 }
