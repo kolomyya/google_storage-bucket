@@ -1,7 +1,7 @@
 provider "google" {
   credentials   = "${file("${var.cpath}")}"
   project       = "${var.project}"
-  region        = "us-central1"
+  region        = "us-east1-b"
 }
 
 
