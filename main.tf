@@ -25,3 +25,14 @@ resource "google_storage_bucket_object" "folder" {
 #   project = "focus-surfer-237100"
 #  }
 #}
+
+#role_entity = [
+#    "${compact(var.role_entity)}",
+#  ]
+#}
+#
+#variable "role_entity" {
+#  description = "List of role/entity pairs in the form ROLE:entity."
+# type        = "list"
+#  default     = []
+#}
