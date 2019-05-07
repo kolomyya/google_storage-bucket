@@ -7,7 +7,7 @@ provider "google" {
 resource "google_storage_bucket" "COLDLINE" {
   name   = "fuchicorp_bucket"
   storage_class = "COLDLINE" 
-  location = "us-central1"
+  location = "us-east1-b"
 }
 
 resource "google_storage_bucket_object" "folder" {
