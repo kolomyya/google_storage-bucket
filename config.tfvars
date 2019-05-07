@@ -1,5 +1,5 @@
-cpath="/root/terraform-google-storage-bucket/focus-surfer-237100-28366fd72149.json"
-project="focus-surfer-237100"
+cpath="/root/terraform-google-storage-bucket/my-project-1534569626996-owner-fsadykov.json"
+project="my-project-1534569626996"
 location="us-central1"
 region="us-central1"
 folders = [ "Nexus", "Jira", "Grafana", "Vault", "Jenkins", "Webplatform"]
