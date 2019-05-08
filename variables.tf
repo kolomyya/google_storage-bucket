@@ -2,8 +2,7 @@
 variable "cpath"  {}
 variable "project" {}
 variable "region" {}
-variable "folders"  {}
-variable "google_k8s_service"  {}
+variable "folders"  {type = "list"}
 
 
 

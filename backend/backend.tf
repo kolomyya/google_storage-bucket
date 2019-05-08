@@ -11,7 +11,7 @@ terraform {
     prefix    = "webplatform-fuchicorp-deploy_dev/terraform.tfstate"       #A path to the data you want to upload
    #prefix   =  "common-tools/"${var.google_k8s_service}"/terraform.tfstate"
     
-    project = "my-project-1534569626996"
+    project = "inspired-muse-225500"
   }
 }
 

@@ -5,23 +5,26 @@ provider "google" {
 }
 
 resource "google_storage_bucket" "COLDLINE" {
-  name   = "fuchicorp_bucket"
+  name   = "fuchicorp"
   storage_class = "COLDLINE" 
-  location = "us-east1-b"
+  location = "us-east1"
 }
 
 resource "google_storage_bucket_object" "folder" {
-    bucket  = "${google_storage_bucket.COLDLINE.name}"
     count = "${length(var.folders)}"
-
-    triggers {
-      folders  =  "${element(var.folders, count.index)}"
-    }
+    name  = "k8s-${element(var.folders,count.index)}"
+    content = "hi people"
+    bucket  = "${google_storage_bucket.COLDLINE.name}"
 }
 
 
-
-
+terraform {
+  backend "gcs" {
+    bucket  = "fuchicorp"
+    prefix    = "bucket/terraform.tfstate"    #A path to the data you want to upload
+   project = "inspired-muse-225500"
+  }
+}
 
 
 
