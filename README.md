@@ -85,3 +85,44 @@ When you have finished, run command:
 ```terraform destroy -var-file=config.tfvars```     Wipes out what have been created
 
 
+
+
+###Remote Backend
+
+Before starting  let's take a look why should we use remote backend. A whenever you provision infrastructure, Terraform keeps track of resources using a state file. So far, this file has been stored on your local machine, which is not ideal especially if there are more people in the team. A Remote Backend is a remote storage solution used to store the state file. For more information on which types of backend can be used, click here.
+
+For this challenge, we'll use Storage Bucket as a remote backend. Create a file called backend.tf with the following content:
+
+backend.tf
+```
+provider "google" {
+  credentials   = "${file("${var.cpath}")}"
+  project       = "${var.project}"
+  region        = "us-east1"
+}
+terraform {
+  backend "gcs" {
+    bucket  = "bucket_name"
+    prefix    = "common_tools/"       #A path to the data you want to upload
+    project = "project_name"
+  }
+}
+```
+
+The bucket specified in the bucket key has already been created for you. The prefix is just the name of the state file on Storage bucket (it can be any name). Use us-east as region.
+
+Now that you have a remote backend configured, let's run ```terraform init``` again so Terraform can initialize the backend. If you are wondering what's going to happen with the current state file, Terraform will ask you whether you want to copy the current state file to storage Bucket. Answer yes:
+
+Now whenever you create or modify resources, Terraform will modify the state file on Storage bucket.
+
+#Listing Bucket Details
+
+If you want to see information about the bucket itself, use the -b option. For example:
+```
+gsutil ls -r gs://bucket_name
+```
+...
+
+#Good luck to all teams!
+
+
