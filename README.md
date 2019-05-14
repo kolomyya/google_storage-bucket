@@ -74,7 +74,7 @@ gsutil ls -L -b gs://bucket
 ```
 
 
-### One closing note 
+# One closing note 
 
 Don't forget to tear down your cluster when you are done experimenting with ```terraform destroy``` to avoid a surprise bill at the end of the month :)
 
@@ -87,7 +87,7 @@ When you have finished, run command:
 
 
 
-###Remote Backend
+### Remote Backend
 
 Before starting  let's take a look why should we use remote backend. A whenever you provision infrastructure, Terraform keeps track of resources using a state file. So far, this file has been stored on your local machine, which is not ideal especially if there are more people in the team. A Remote Backend is a remote storage solution used to store the state file. For more information on which types of backend can be used, click here.
 
@@ -115,7 +115,7 @@ Now that you have a remote backend configured, let's run ```terraform init``` ag
 
 Now whenever you create or modify resources, Terraform will modify the state file on Storage bucket.
 
-#Listing Bucket Details
+# Listing Bucket Details
 
 If you want to see information about the bucket itself, use the -b option. For example:
 ```
@@ -123,6 +123,6 @@ gsutil ls -r gs://bucket_name
 ```
 ...
 
-#Good luck to all teams!
+# Good luck to all teams!
 
 
